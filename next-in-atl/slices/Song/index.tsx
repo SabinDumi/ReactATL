@@ -48,7 +48,7 @@ interface  IImage{
 
 }
 
-interface  IPrimary{
+export interface IPrimary{
   title:string;
   artist:string;
   cover:string;

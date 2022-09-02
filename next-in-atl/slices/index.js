@@ -6,6 +6,7 @@ export {
 	Song,
 };
 
+
 export const components = {
 	song: Song,
 };

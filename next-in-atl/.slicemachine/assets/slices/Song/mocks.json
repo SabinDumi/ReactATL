@@ -6,14 +6,7 @@
       {}
     ],
     "primary": {
-      "title": [
-        {
-          "type": "heading1",
-          "text": "Column",
-          "spans": []
-        }
-      ],
-      "artist": "numeral",
+      "artist": "breathe",
       "cover": {
         "dimensions": {
           "width": 900,
@@ -21,12 +14,13 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+        "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
       },
       "songlink": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
-      }
+        "url": "https://prismic.io"
+      },
+      "title": "call"
     },
     "slice_type": "song"
   }

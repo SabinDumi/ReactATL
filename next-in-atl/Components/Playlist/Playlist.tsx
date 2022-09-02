@@ -1,6 +1,9 @@
 import react from "react";
 import { Song } from "../Songs/Song";
 import styles from "./Playlist.module.scss";
+import{SliceLike, SliceZone, SliceZoneLike} from "@prismicio/react"
+import{components } from "../../slices"
+import { IPrimary } from "../../slices/Song";
 
 const songList=[
     {
@@ -16,8 +19,11 @@ const songList=[
         duration: "3:54"
     },
     ];
-
-export const Playlist = () => {
+interface IPlaylist{
+    slices: SliceZoneLike<SliceLike<string>>;
+    setSong: (data: IPrimary) => void;
+}
+export const Playlist = (props: IPlaylist) => {
 
     return (
         <><div className={styles.playlist}>
@@ -38,29 +44,13 @@ export const Playlist = () => {
                     Duration
                 </span>
                 </div>
-            <div className={styles["melody"]}>
-                <span className={styles["song-nr"]}>
-                    1
-                </span>
-                <img src="./assets/Led Zeppelin.jpeg" className="song-cover">
-                </img>
-                <span className={styles["song-title"]}>
-                    Dazed and Confused
-                </span>
-                <span className={styles["song-album"]}>
-                    Led Zeppelin
-                </span>
-                <span className={styles["song-duration"]}>
-                    6:24
-                </span>
-            </div>
         </div>
-        <div id="songs-wrapper" className={styles["songs"]}>
+       { <div id="songs-wrapper" className={styles["songs"]}>
                         {/* <Song Index={1} song Info={songList[0]} />*/}
                         {songList.map(function(details,index) {
                         return <Song index={index+1} songInfo={details} />
                     })}
-                    </div>
+                    </div> }
         </>
     );
 };
